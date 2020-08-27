@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+      <!-- Aprobar todas las etiquetas html y todos los signos -->
+      <meta charset='UTF-8'>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+      <!-- Link a jquery mobile -->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+      <!-- script a jquery y jquery mobile -->
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+      <!-- Estilos pantalla secundaria -->
+      <link rel="stylesheet" type="text/css" href="../Estilos/sec.css"> 
+
+      <script src="../js/secundaria.js"> </script>
+    </head>
+    <body>
+      <div data-role="page" data-theme="a">
+        <div data-role="header" id="aaa" data-position="fixed"> <h1>Actualidad de coronavirus!</h1> <a id="btnprincipal" href="javascript:cerrar();">Pantalla principal</a> </div>
+        <div role="main" class="ui-content">
+          <input type="text" id="lblpais" placeholder="Ingrese pais ">
+          <input type="button" value="Buscar" id="btnBuscar">
+          <table data-role="table" id="tblcorona" class="ui-responsive table-stroke">  
+            <thead>
+                  <tr>
+                    <th scope="col"> Código de pais</th>
+                    <th scope="col"> Nombre</th>
+                    <th scope="col"> Fecha </th>
+                    <th scope="col"> Total infectados</th>
+                    <th scope="col"> Nuevos casos</th>
+                    <th scope="col"> Muertos</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr>
+                    <td id=tblcode></td>
+                    <td id=tblnom></td>
+                    <td id="fechaa"></td>
+                    <td id=tblinfectados></td>
+                    <td id="tblnuevos"></td>
+                    <td id=tblmuertos></td>
+                  </tr>
+            </tbody>
+          </table>
+          <label id="msj" style="color: red; font-size: 15px;"></label>
+        </div>
+        <div data-role="footer" data-position="fixed" data-fullscreen="true"> <h1> Coronavirus estadísticas @  </h1> </div>
+      </div>
+    </body>
+</html>

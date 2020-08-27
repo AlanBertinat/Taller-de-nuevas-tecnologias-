@@ -1,0 +1,143 @@
+<html>
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+        <!-- Link a script y Jquery -->
+        <script src="../index/jquery-3.5.1.min.js"></script>
+        <script src="../js/abm.js"></script>
+        <script src="../js/principal.js"> </script>
+        
+        <!-- Link a css y bootstrap-->
+        <link rel="stylesheet" type="text/css" href="../Estilos/style.css"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        
+        <!-- Link a iconos de Fontanswome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="container col-xl-12 col-lg-12 col-sm-12 col-md-12">
+        <div class="row">
+      <nav class="navbar navbar-expand-lg col-lg-12 col-md-12 col-sm-12 col-xl-12 navbar-light bg-light border-bottom">
+        <a href="../index/ptllPrincipal.html" class="btn btn-primary" id="menu-toggle" ><i class="fas fa-home"></i></a>       
+          <ul class="navbar-nav ml-auto mt-2">
+            <li class="nav-item ">
+              <a class="nav-link" href="../index/ptllLogin.html" > Cerrar Sesion </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" target="_blank" href="../index/Secundaria.html"> Pantalla secundaria </a>
+          </li>
+          </ul>
+      </nav>
+    </div>
+    </div>
+      <!--Divisa unicamente dolar (1er requerimiento.)-->
+      <div class="container">
+              <div class="row">
+              <h1 class="text-center col-12"> Divisa tipo dolar! </h1>
+            <table id="tblapi" class="table table-dark col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+              <thead>
+                <tr>
+                  <th scope="col"> Código</th>
+                  <th scope="col"> Fecha</th>
+                  <th scope="col"> Nombre</th>
+                  <th scope="col"> Unidad de medida</th>
+                  <th scope="col"> Valor actual</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td id=tblcodigo></td>
+                <td id=tblfecha></td>
+                <td id=tblnombre></td>
+                <td id=tblum></td>
+                <td id=tblvalor></td>
+              </tr>
+            </tbody>
+            </table>
+            </div>
+      </div>
+      <!-- Divisa segun lo que busque el usuario-->
+      <div class="container">
+          <div class="row">
+            <h1 class="text-center col-lg-12 col-sm-12 col-xl-12 col-md-12"> Buscar divisa deseada </h1>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12 row justify-content-center">
+              <input type="text" id="txtapi2" required class="col-md-12 col-lg-12 col-sm-12 col-xl-3" placeholder="Ingresa divisa">
+              <input type="button" id="btndivisa1" class="btn btn-primary col-md-12 col-lg-12 col-sm-12 col-xl-2" value ="Buscar">
+            </div>
+            <div class=" col-md-12 col-lg-12 col-sm-12 col-xl-12 row justify-content-center mt-2 " >
+              <label role="alert" id="lblmsjprinci" class="alert alert-danger"></label>
+            </div>
+          <table id="tblapi" class="table table-dark col-md-12 col-lg-12 col-sm-12 col-xl-12">
+            <thead>
+              <tr>
+                <th scope="col"> Código</th>
+                <th scope="col"> Fecha</th>
+                <th scope="col"> Nombre</th>
+                <th scope="col"> Unidad de medida</th>
+                <th scope="col"> Valor actual</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id=tblcodigo1></td>
+                <td id=tblfecha1></td>
+                <td id=tblnombre1></td>
+                <td id=tblum1></td>
+                <td id=tblvalor1></td>
+              </tr>
+            </tbody>
+          </table>
+          <label id="msj" style="font-size: 20px; color: crimson;"></label>
+        </div>
+      </div>
+      <!-- Api  de usuarios random-->
+      <div class="container">
+          <div class="row">
+          <h1 class="text-center col-lg-12 col-sm-12 col-xl-12 col-md-12" > Usuario random </h1>
+        <table id="tblrandomuser" class="table table-dark col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+          <thead>
+            <tr>
+              <th scope="col"> Nombre</th>
+              <th scope="col"> Segundo nombre</th>
+              <th scope="col"> Nomenclatura</th>
+              <th scope="col"> Imagen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id=tblnom></td>
+              <td id=tblnom2></td>
+              <td id=tblnomenclatura></td>
+              <td id=tblimg></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <!-- Api  Mercado libre-->
+      <div class="container">
+        <div class="row" id="tabla" >
+        <h1 class="text-center col-lg-12 col-sm-12 col-xl-12 col-md-12" > Buscar productos! </h1>
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xl-12 row justify-content-center">
+        <input type="text" id="busquedaml" placeholder="Ingrese nombre del  producto" required class="col-md-12 col-lg-12 col-sm-12 col-xl-3">
+        <input type="button" id="btnbusqueda" class="btn btn-primary col-md-12 col-lg-12 col-sm-12 col-xl-2" value="Buscar">
+        </div>
+        <div class=" col-md-12 col-lg-12 col-sm-12 col-xl-12 row justify-content-center mt-2 " >
+          <label role="alert" id="lblmsjprinc" class="alert alert-danger"></label>
+        </div>
+      <table id="tblmercadolibre" class="table table-dark col-md-12 col-lg-12 col-sm-12 col-xl-12 ">
+        <thead>
+          <tr>
+            <th scope="col"> Titulo</th>
+            <th scope="col"> Moneda</th>
+            <th scope="col"> Precio</th>
+            <th scope="col"> Imagen</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+      </div>
+      <label id="msj" style="font-size: 20px;" ></label>
+    </body>
+</html>

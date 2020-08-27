@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+        <!-- Link a script y Jquery -->
+        <script src="../index/jquery-3.5.1.min.js"></script> 
+        <script src="../js/abm.js"> </script>
+
+        <!-- Link a css y bootstrap-->
+        <link rel="stylesheet" type="text/css" href="../Estilos/style.css"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        
+        <!-- Link a iconos de Fontanswome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    
+    <body>
+        <!-- Menu items-->
+        <div class="container col-xl-12 col-lg-12 col-sm-12 col-md-12">
+          <div class="row">
+        <nav class="navbar navbar-expand-lg col-lg-12 col-md-12 col-sm-12 col-xl-12 navbar-light bg-light border-bottom">
+              <a href="#" class="btn btn-primary"  id="menu-toggle" disabled="true" ><i class="fas fa-home"></i></a>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/AlanBertinat/ProyectoTec" target="_blank" > Mi Git Hub</a>
+                    </li> 
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- Loguear usuario -->
+        <div class = "modal-dialog text-center " id="DivInicioSesion">
+            <div class = "col-sm-10 main-section">
+                <div class= "modal-content">
+                    <div class = "col-12 user-img">
+                        <img src="../Imagenes/icon-login.png">
+                    </div>
+                    <form class="col-12">
+                        <div class="form-group" id="user-group">
+                            <input type=" text" class="form-control" id="user" placeholder="Ingrese Usuario:">
+                        </div>
+                        <div id="lblmsjlogin" class="alert alert-danger" role="alert"></div>
+                        <div class="form-group" id="contraseña-group">
+                            <input type="password" class="form-control" id="pas" placeholder="Ingrese Contraseña:">
+                        </div>
+                        <button type="button" id="btnIngresar" class="btn btn-info"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+
+                    </form>
+                    <div class="forgot">
+                        <lablel > No tienes cuenta? <a class="nav-link" href="../index/ptllRegistro.html"> Registrarse</a></lablel>
+                    </div>
+                </div>		
+            </div>
+        </div>
+        <!--  Gestiónes de usuarios  (ABM) -->
+            <div id="divabm" class="container modal-content mt-4 col-sm-6 col-6">
+              <form id="gestionesABM">
+              <label id="titleform"> Gestión de usuarios  </label>
+                  <div class="col-sm-12">
+                  <label class="control-label col-sm-6 " for="usuario">Nick name :</label>
+                  </div>
+                  <div class="col-sm-12 row ml-3">
+                  <input type="text" class="form-control col-sm-6 col-6" id="mostraru" name="usuario">
+                  <input type="button" value="Buscar Usuario" id="btnBuscarU" class="btn btn-primary col-sm-3">
+                </div>
+
+                  <label id="lblmsjabm" class="alert alert-danger col-sm-5 ml-4"> </label>
+
+                <div class="col-sm-12">
+                  <label class="control-label col-sm-6"> Nombre completo: </label>
+                  <div class="col-sm-12 col-12">
+                    <input type="text" class="form-control col-sm-6" id="mostrarn">
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <label class="control-label col-sm-6" for="pwd">Contraseña:</label>
+                  <div class="col-sm-12 col-12">          
+                    <input type="text" class="form-control col-sm-6 col-6" id="mostrarc"><br>
+                  </div>
+                </div><br>
+                <div class="form-inline">        
+                  <div class="col-sm-offset-2 col-sm-12">
+                    <input type="button" disabled="true" id="btnBaja" value="Eliminar" class="btn btn-info col-sm-3">
+                    <input type="button" disabled="true" id="btnModificar" value="Modificar" class="btn btn-info col-sm-3">
+                  </div>
+            </div>
+          </form>
+          <a class="nav-link" href="../index/ptllLogin.html" > Cerrar Sesion </a>
+          </div>
+          <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+            <div class="container text-center">
+              © 2020 Taller de google (?)
+              <a href="http://www.maplandia.com/uruguay/paysandu/paysandu/" target="_blank"> my city</a>
+            </div>
+            </footer>
+    </body>
+</html>

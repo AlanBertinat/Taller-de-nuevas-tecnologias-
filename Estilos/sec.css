@@ -1,0 +1,36 @@
+.ui-footer{
+    background-color: rgb(49, 92, 173);
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+
+th, td {
+    border: rgb(248, 248, 248) 2px solid;
+    text-align: center;
+}
+thead{
+    background: #000000;
+    color: white;
+}
+tbody{
+    background: #000000;
+    color: white;
+}
+.ui-page {
+    background-image: url("../Imagenes/fondoprincipal.jpg");
+    background-size: cover;
+}
+.ui-header{
+    background-color: rgb(38, 82, 163);
+    color: rgb(255, 255, 255);
+    font-size: large;
+}
+.ui-content{
+    opacity: .90;
+}
+#btnprincipal{
+    background-color: rgb(255, 241, 241);
+}
+#aaa{
+    background-color: rgb(248, 236, 236);
+}
